@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class detectCollider : MonoBehaviour
 {
+
+    public string msg;
    
     // This function is called when another collider enters the trigger collider
     void OnTriggerEnter2D(Collider2D other)
@@ -10,11 +12,11 @@ public class detectCollider : MonoBehaviour
 
         if (other.name == "arteries")
         {
-            Debug.Log("Those arteries have some slices in them...");
+            msg = "Those arteries have some slices in them...";
         }
         if (other.name == "heart")
         {
-            Debug.Log("It appears his heart was broken...");
+            msg = "It appears his heart was broken...";
         }
         Debug.Log("Trigger Entered by: " + other);
         
@@ -27,6 +29,10 @@ public class detectCollider : MonoBehaviour
        
     }
 
+    public string GetMsg()
+    {
+        return msg;
+    }
    
     void OnTriggerExit2D(Collider2D other)
     {

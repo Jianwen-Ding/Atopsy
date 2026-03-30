@@ -3467,6 +3467,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TextLoader
   infoText: {fileID: 1730241579}
+  receiver: {fileID: 14933942}
+  typingSpeed: 0.05
 --- !u!1 &1742872561
 GameObject:
   m_ObjectHideFlags: 0

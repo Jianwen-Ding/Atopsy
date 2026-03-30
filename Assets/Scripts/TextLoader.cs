@@ -1,18 +1,31 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
+using System.Collections; // Required for Coroutines
+
 public class TextLoader : MonoBehaviour
 {
     public TextMeshProUGUI infoText;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject receiver; 
+    public float typingSpeed = 0.05f;
+
     void Start()
     {
-        infoText.text = "Drop Organs Below";
+        infoText.text = "";
+        StartCoroutine(TypeText("Drop Organs Below..."));
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        TypeText(GetMsg());
+    }
+
+    IEnumerator TypeText(string message)
+    {
+        infoText.text = ""; 
+        foreach (char c in message)
+        {
+            infoText.text += c; // Add one character at a time
+            yield return new WaitForSeconds(typingSpeed); // Wait a tiny bit
+        }
     }
 }
