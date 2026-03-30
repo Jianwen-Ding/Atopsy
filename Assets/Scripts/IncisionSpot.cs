@@ -3,18 +3,17 @@ using UnityEngine;
 public class IncisionSpot : MonoBehaviour
 {
     
-    [SerializeField]
-    GameObject incisionOpening;
+    [SerializeField] GameObject incisionOpening;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        incisionOpening.SetActive(false);
+        incisionOpening.SetActive(true);
     }
 
     private void OnMouseDown()
     {
-        incisionOpening.SetActive(true);
+        incisionOpening.SetActive(false);
         Destroy(this);
     }
 }
