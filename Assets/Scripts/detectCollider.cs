@@ -4,7 +4,7 @@ public class detectCollider : MonoBehaviour
 {
 
     public string msg;
-   
+    public TextLoader textloader;
     // This function is called when another collider enters the trigger collider
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -13,6 +13,7 @@ public class detectCollider : MonoBehaviour
         if (other.name == "arteries")
         {
             msg = "Those arteries have some slices in them...";
+            textloader.TypeText(msg);
         }
         if (other.name == "heart")
         {

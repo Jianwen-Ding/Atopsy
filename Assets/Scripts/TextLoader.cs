@@ -5,7 +5,7 @@ using System.Collections; // Required for Coroutines
 public class TextLoader : MonoBehaviour
 {
     public TextMeshProUGUI infoText;
-    public GameObject receiver; 
+    
     public float typingSpeed = 0.05f;
 
     void Start()
@@ -14,10 +14,6 @@ public class TextLoader : MonoBehaviour
         StartCoroutine(TypeText("Drop Organs Below..."));
     }
 
-    void Update()
-    {
-       
-    }
 
     IEnumerator TypeText(string message)
     {
