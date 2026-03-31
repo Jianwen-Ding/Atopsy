@@ -16,7 +16,7 @@ public class TextLoader : MonoBehaviour
 
     void Update()
     {
-        TypeText(GetMsg());
+       
     }
 
     IEnumerator TypeText(string message)

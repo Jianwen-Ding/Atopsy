@@ -11,8 +11,9 @@ public class IncisionSpot : MonoBehaviour
         incisionOpening.SetActive(true);
     }
 
-    private void OnMouseDown()
+    void OnMouseDown()
     {
+        Debug.Log("clicked");
         incisionOpening.SetActive(false);
         Destroy(this);
     }
